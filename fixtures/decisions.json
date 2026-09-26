@@ -1,0 +1,22 @@
+{
+  "decisions": [
+    {"decision_id": "D01", "session_id": "S1", "rule_id": "R2-FORCED-PERMISSION", "reviewer": "审查员甲", "verdict": "fail", "decided_at": "2026-08-04T10:00:00+08:00", "note": "启动即弹窗索取相机权限，拒绝后退出"},
+    {"decision_id": "D02", "session_id": "S1", "rule_id": "R2-FORCED-PERMISSION", "reviewer": "审查员乙", "verdict": "fail", "decided_at": "2026-08-04T10:05:00+08:00", "note": "复现一致"},
+    {"decision_id": "D02", "session_id": "S1", "rule_id": "R2-FORCED-PERMISSION", "reviewer": "审查员乙", "verdict": "fail", "decided_at": "2026-08-04T10:05:00+08:00", "note": "复现一致"},
+    {"decision_id": "D03", "session_id": "S1", "rule_id": "R3-DISCLOSURE-COMPLETE", "reviewer": "审查员甲", "verdict": "fail", "decided_at": "2026-08-04T10:10:00+08:00", "note": "device_id 与未知统计组件均未披露"},
+    {"decision_id": "D04", "session_id": "S1", "rule_id": "R3-DISCLOSURE-COMPLETE", "reviewer": "审查员乙", "verdict": "escalate", "decided_at": "2026-08-04T10:12:00+08:00", "note": "需确认 device_id 采集主体"},
+    {"decision_id": "D05", "session_id": "S1", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员甲", "verdict": "fail", "decided_at": "2026-08-04T10:20:00+08:00", "note": "注销超期未生效"},
+    {"decision_id": "D06", "session_id": "S1", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员乙", "verdict": "fail", "decided_at": "2026-08-04T10:22:00+08:00", "note": "复现一致"},
+    {"decision_id": "D07", "session_id": "S2", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员甲", "verdict": "escalate", "decided_at": "2026-08-04T11:00:00+08:00", "note": "步骤是否超限待确认"},
+    {"decision_id": "D08", "session_id": "S2", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员甲", "verdict": "fail", "decided_at": "2026-08-04T11:30:00+08:00", "note": "复测确认六步超过登记承诺"},
+    {"decision_id": "D09", "session_id": "S2", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员乙", "verdict": "fail", "decided_at": "2026-08-04T11:05:00+08:00", "note": "复现一致"},
+    {"decision_id": "D10", "session_id": "S3", "rule_id": "R2-FORCED-PERMISSION", "reviewer": "审查员甲", "verdict": "pass", "decided_at": "2026-08-12T15:00:00+08:00", "note": "权限改为功能内申请"},
+    {"decision_id": "D11", "session_id": "S3", "rule_id": "R2-FORCED-PERMISSION", "reviewer": "审查员乙", "verdict": "pass", "decided_at": "2026-08-12T15:05:00+08:00", "note": "复现一致"},
+    {"decision_id": "D12", "session_id": "S3", "rule_id": "R3-DISCLOSURE-COMPLETE", "reviewer": "审查员甲", "verdict": "pass", "decided_at": "2026-08-12T15:10:00+08:00", "note": "device_id 已披露，未知组件已移除"},
+    {"decision_id": "D13", "session_id": "S3", "rule_id": "R3-DISCLOSURE-COMPLETE", "reviewer": "审查员乙", "verdict": "pass", "decided_at": "2026-08-12T15:12:00+08:00", "note": "复现一致"},
+    {"decision_id": "D14", "session_id": "S3", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员甲", "verdict": "pass", "decided_at": "2026-08-12T15:20:00+08:00", "note": "三步内完成注销"},
+    {"decision_id": "D15", "session_id": "S3", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员乙", "verdict": "pass", "decided_at": "2026-08-12T15:22:00+08:00", "note": "复现一致"},
+    {"decision_id": "D16", "session_id": "S4", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员甲", "verdict": "pass", "decided_at": "2026-08-13T15:00:00+08:00", "note": "热更新后注销链路精简"},
+    {"decision_id": "D17", "session_id": "S4", "rule_id": "R4-CANCELLATION-EFFECTIVE", "reviewer": "审查员乙", "verdict": "pass", "decided_at": "2026-08-13T15:05:00+08:00", "note": "复现一致"}
+  ]
+}

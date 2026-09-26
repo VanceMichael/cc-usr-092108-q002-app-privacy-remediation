@@ -1,0 +1,74 @@
+{
+  "sessions": [
+    {
+      "session_id": "S1",
+      "app_id": "app-demo",
+      "channel": "huawei-store",
+      "occurred_at": "2026-08-03T10:30:00+08:00",
+      "round": 1,
+      "rule_set_version": 1,
+      "test_account_ref": "acct-7f3a",
+      "observations": [
+        {"kind": "policy_check", "published": true, "policy_version": "2026-07"},
+        {"kind": "permission_prompt", "permission": "android.permission.CAMERA", "scene": "启动即弹窗", "refusal_blocks_use": true, "evidence": ["E1"]},
+        {"kind": "network_capture", "fields_seen": ["nickname", "location", "device_id"], "sdks_seen": ["umeng-sdk", "unknown-analytics"], "evidence": ["E2"], "raw_payload": "{\"nickname\":\"测试用户\",\"location\":\"31.23,121.47\"}", "device_idfv": "FAKE-IDFV-0001"},
+        {"kind": "cancellation_attempt", "path_found": true, "steps": 5, "completed": false, "reason": "人工审核未在15个工作日内处理", "evidence": ["E3"], "account_phone": "13800000000"}
+      ],
+      "evidence": [
+        {"evidence_id": "E1", "kind": "screenshot", "sha256": "c0a6a80a98fc825bde45085dddb7b46fe6ad997e7b9d29273ef11cc1560e3607", "captured_at": "2026-08-03T10:32:00+08:00"},
+        {"evidence_id": "E2", "kind": "capture-log", "sha256": "1a70c8d628c9bc3cf625e2c1a09787fc645da78eeb4ac986b5b76f580b820db3", "captured_at": "2026-08-03T10:35:00+08:00"},
+        {"evidence_id": "E3", "kind": "recording", "sha256": "58f0d8f380858edb4bf23ada3d5359caef3fdd2c05ac82ad4bfb7e7bdfe90960", "captured_at": "2026-08-03T10:41:00+08:00"}
+      ]
+    },
+    {
+      "session_id": "S2",
+      "app_id": "app-demo",
+      "channel": "wechat-miniapp",
+      "occurred_at": "2026-08-03T14:00:00+08:00",
+      "round": 1,
+      "rule_set_version": 1,
+      "test_account_ref": "acct-7f3a",
+      "observations": [
+        {"kind": "policy_check", "published": true, "policy_version": "2026-08-mini"},
+        {"kind": "permission_prompt", "permission": "scope.userLocation", "scene": "进入首页", "refusal_blocks_use": false},
+        {"kind": "network_capture", "fields_seen": ["nickname"], "sdks_seen": []},
+        {"kind": "cancellation_attempt", "path_found": true, "steps": 6, "completed": true, "evidence": ["E4"]}
+      ],
+      "evidence": [
+        {"evidence_id": "E4", "kind": "recording", "sha256": "912ac013d5c44500f5f6785f389bc4986efa8f6da4e79522beed5edc7f016ed0", "captured_at": "2026-08-03T14:12:00+08:00"}
+      ]
+    },
+    {
+      "session_id": "S3",
+      "app_id": "app-demo",
+      "channel": "huawei-store",
+      "occurred_at": "2026-08-12T10:00:00+08:00",
+      "round": 2,
+      "rule_set_version": 1,
+      "test_account_ref": "acct-9b21",
+      "observations": [
+        {"kind": "policy_check", "published": true, "policy_version": "2026-08"},
+        {"kind": "permission_prompt", "permission": "android.permission.CAMERA", "scene": "扫码功能内", "refusal_blocks_use": false},
+        {"kind": "network_capture", "fields_seen": ["nickname", "location", "device_id"], "sdks_seen": ["umeng-sdk"]},
+        {"kind": "cancellation_attempt", "path_found": true, "steps": 3, "completed": true}
+      ],
+      "evidence": []
+    },
+    {
+      "session_id": "S4",
+      "app_id": "app-demo",
+      "channel": "wechat-miniapp",
+      "occurred_at": "2026-08-13T09:30:00+08:00",
+      "round": 2,
+      "rule_set_version": 1,
+      "test_account_ref": "acct-9b21",
+      "observations": [
+        {"kind": "policy_check", "published": true, "policy_version": "2026-08-mini"},
+        {"kind": "permission_prompt", "permission": "scope.userLocation", "scene": "进入首页", "refusal_blocks_use": false},
+        {"kind": "network_capture", "fields_seen": ["nickname"], "sdks_seen": []},
+        {"kind": "cancellation_attempt", "path_found": true, "steps": 3, "completed": true}
+      ],
+      "evidence": []
+    }
+  ]
+}

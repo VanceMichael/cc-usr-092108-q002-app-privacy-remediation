@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "审查判断记录",
+  "type": "object",
+  "required": ["decisions"],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "description": "多名审查员对检测发现的判断；并发判断与重复提交在合并后只形成一条一致记录",
+      "items": {
+        "type": "object",
+        "required": ["decision_id", "session_id", "rule_id", "reviewer", "verdict", "decided_at"],
+        "properties": {
+          "decision_id": {"type": "string", "minLength": 1},
+          "session_id": {"type": "string", "minLength": 1},
+          "rule_id": {"type": "string", "minLength": 1},
+          "reviewer": {"type": "string", "minLength": 1},
+          "verdict": {"enum": ["pass", "fail", "escalate"]},
+          "decided_at": {"type": "string", "format": "date-time"},
+          "note": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

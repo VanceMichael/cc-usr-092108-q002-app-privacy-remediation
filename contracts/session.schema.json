@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "隐私检测会话记录",
+  "type": "object",
+  "required": ["sessions"],
+  "properties": {
+    "sessions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "session_id",
+          "app_id",
+          "channel",
+          "occurred_at",
+          "round",
+          "rule_set_version",
+          "observations"
+        ],
+        "properties": {
+          "session_id": {"type": "string", "minLength": 1},
+          "app_id": {"type": "string", "minLength": 1},
+          "channel": {"type": "string", "minLength": 1},
+          "occurred_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "检测发生时间，用于按发生时间解析当时生效的客户端版本"
+          },
+          "round": {"type": "integer", "minimum": 1},
+          "rule_set_version": {"type": "integer", "minimum": 1},
+          "test_account_ref": {
+            "type": "string",
+            "description": "匿名化测试账号标识，不记录真实用户账号"
+          },
+          "observations": {
+            "type": "array",
+            "minItems": 1,
+            "description": "检测观测记录；只保留核验必需字段，原始报文与个人数据在留存环节被移除",
+            "items": {
+              "type": "object",
+              "required": ["kind"],
+              "properties": {
+                "kind": {
+                  "enum": ["policy_check", "permission_prompt", "network_capture", "cancellation_attempt"]
+                },
+                "published": {"type": "boolean"},
+                "policy_version": {"type": "string"},
+                "permission": {"type": "string"},
+                "scene": {"type": "string"},
+                "refusal_blocks_use": {"type": "boolean"},
+                "fields_seen": {"type": "array", "items": {"type": "string"}},
+                "sdks_seen": {"type": "array", "items": {"type": "string"}},
+                "path_found": {"type": "boolean"},
+                "steps": {"type": "integer", "minimum": 0},
+                "completed": {"type": "boolean"},
+                "reason": {"type": "string"},
+                "evidence": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["evidence_id", "kind", "sha256"],
+              "properties": {
+                "evidence_id": {"type": "string", "minLength": 1},
+                "kind": {"enum": ["screenshot", "recording", "capture-log"]},
+                "sha256": {"type": "string", "minLength": 64, "maxLength": 64},
+                "captured_at": {"type": "string", "format": "date-time"}
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

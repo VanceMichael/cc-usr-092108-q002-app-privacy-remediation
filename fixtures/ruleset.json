@@ -1,0 +1,31 @@
+{
+  "rule_set_id": "app-privacy-rules",
+  "version": 1,
+  "source_context": {"domain": "app-privacy-remediation", "version": 1, "sample_id": "sample-002"},
+  "rules": [
+    {
+      "rule_id": "R1-RULES-PUBLISHED",
+      "title": "个人信息规则已公开且与登记一致",
+      "source_fact": "问题涉及规则未公开、非必要权限、披露不完整和注销无效",
+      "evaluator": "rules_published"
+    },
+    {
+      "rule_id": "R2-FORCED-PERMISSION",
+      "title": "不得强制索取非必要权限",
+      "source_fact": "问题涉及规则未公开、非必要权限、披露不完整和注销无效",
+      "evaluator": "forced_nonessential_permission"
+    },
+    {
+      "rule_id": "R3-DISCLOSURE-COMPLETE",
+      "title": "实际采集与披露内容一致",
+      "source_fact": "问题涉及规则未公开、非必要权限、披露不完整和注销无效",
+      "evaluator": "disclosure_complete"
+    },
+    {
+      "rule_id": "R4-CANCELLATION-EFFECTIVE",
+      "title": "注销路径可达且在承诺期限内生效",
+      "source_fact": "问题涉及规则未公开、非必要权限、披露不完整和注销无效",
+      "evaluator": "cancellation_effective"
+    }
+  ]
+}

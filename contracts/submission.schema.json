@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "运营方整改材料提交",
+  "type": "object",
+  "required": ["submissions"],
+  "properties": {
+    "submissions": {
+      "type": "array",
+      "minItems": 1,
+      "description": "运营方提交的整改材料；内容相同的重复提交只形成一条记录，内容不同的提交按发生时间进入新一轮",
+      "items": {
+        "type": "object",
+        "required": ["submission_id", "operator", "occurred_at", "content"],
+        "properties": {
+          "submission_id": {"type": "string", "minLength": 1},
+          "operator": {"type": "string", "minLength": 1},
+          "occurred_at": {"type": "string", "format": "date-time"},
+          "content": {
+            "type": "object",
+            "required": ["versions", "claims"],
+            "properties": {
+              "versions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+              "claims": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

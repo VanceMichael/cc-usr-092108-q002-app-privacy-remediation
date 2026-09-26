@@ -1,0 +1,111 @@
+{
+  "app_id": "app-demo",
+  "operator": "示例运营有限公司",
+  "notice_published_at": "2026-07-20T09:00:00+08:00",
+  "channels": {
+    "huawei-store": {
+      "kind": "app",
+      "releases": [
+        {"event": "full", "version": "3.1.9", "occurred_at": "2026-06-01T09:00:00+08:00"},
+        {"event": "submitted", "version": "3.2.0", "occurred_at": "2026-07-22T10:00:00+08:00"},
+        {"event": "approved", "version": "3.2.0", "occurred_at": "2026-07-29T15:00:00+08:00"},
+        {"event": "submitted", "version": "3.2.1", "occurred_at": "2026-08-01T10:00:00+08:00"},
+        {"event": "approved", "version": "3.2.1", "occurred_at": "2026-08-04T11:00:00+08:00"},
+        {"event": "gray", "version": "3.2.1", "coverage": 0.2, "occurred_at": "2026-08-05T10:00:00+08:00"},
+        {"event": "full", "version": "3.2.1", "occurred_at": "2026-08-08T10:00:00+08:00"}
+      ]
+    },
+    "wechat-miniapp": {
+      "kind": "miniapp",
+      "releases": [
+        {"event": "full", "version": "1.4.0", "occurred_at": "2026-07-21T09:00:00+08:00"},
+        {"event": "hot_update", "version": "1.4.1", "occurred_at": "2026-08-02T20:00:00+08:00"},
+        {"event": "hot_update", "version": "1.4.2", "occurred_at": "2026-08-12T19:00:00+08:00"}
+      ]
+    }
+  },
+  "versions": {
+    "3.1.9": {
+      "privacy_policy": {"published": false, "version": "2026-05"},
+      "permissions": [
+        {"name": "android.permission.CAMERA", "purpose": "扫码", "essential": false},
+        {"name": "android.permission.INTERNET", "purpose": "基础网络通信", "essential": true}
+      ],
+      "collection_fields": [
+        {"name": "nickname", "purpose": "账号资料", "essential": true},
+        {"name": "location", "purpose": "附近的人", "essential": false}
+      ],
+      "third_party_components": [
+        {"name": "umeng-sdk", "version": "9.5.0", "collects": ["device_id"]}
+      ],
+      "cancellation": {"entry": "我的-设置-账号注销", "max_steps": 4, "sla_working_days": 15}
+    },
+    "3.2.0": {
+      "privacy_policy": {"published": true, "version": "2026-07"},
+      "permissions": [
+        {"name": "android.permission.CAMERA", "purpose": "扫码", "essential": false},
+        {"name": "android.permission.INTERNET", "purpose": "基础网络通信", "essential": true}
+      ],
+      "collection_fields": [
+        {"name": "nickname", "purpose": "账号资料", "essential": true},
+        {"name": "location", "purpose": "附近的人", "essential": false}
+      ],
+      "third_party_components": [
+        {"name": "umeng-sdk", "version": "9.6.0", "collects": ["device_id"]}
+      ],
+      "cancellation": {"entry": "我的-设置-账号注销", "max_steps": 4, "sla_working_days": 15}
+    },
+    "3.2.1": {
+      "privacy_policy": {"published": true, "version": "2026-08"},
+      "permissions": [
+        {"name": "android.permission.CAMERA", "purpose": "扫码", "essential": false},
+        {"name": "android.permission.INTERNET", "purpose": "基础网络通信", "essential": true}
+      ],
+      "collection_fields": [
+        {"name": "nickname", "purpose": "账号资料", "essential": true},
+        {"name": "location", "purpose": "附近的人", "essential": false},
+        {"name": "device_id", "purpose": "安全风控", "essential": true}
+      ],
+      "third_party_components": [
+        {"name": "umeng-sdk", "version": "9.6.0", "collects": ["device_id"]}
+      ],
+      "cancellation": {"entry": "我的-设置-账号注销", "max_steps": 4, "sla_working_days": 15}
+    },
+    "1.4.0": {
+      "privacy_policy": {"published": false, "version": "2026-06-mini"},
+      "permissions": [
+        {"name": "scope.userLocation", "purpose": "附近门店", "essential": false}
+      ],
+      "collection_fields": [
+        {"name": "nickname", "purpose": "账号资料", "essential": true}
+      ],
+      "third_party_components": [],
+      "cancellation": {"entry": "我的-账号与安全-注销", "max_steps": 4, "sla_working_days": 15}
+    },
+    "1.4.1": {
+      "privacy_policy": {"published": true, "version": "2026-08-mini"},
+      "permissions": [
+        {"name": "scope.userLocation", "purpose": "附近门店", "essential": false}
+      ],
+      "collection_fields": [
+        {"name": "nickname", "purpose": "账号资料", "essential": true}
+      ],
+      "third_party_components": [],
+      "cancellation": {"entry": "我的-账号与安全-注销", "max_steps": 4, "sla_working_days": 15}
+    },
+    "1.4.2": {
+      "privacy_policy": {"published": true, "version": "2026-08-mini"},
+      "permissions": [
+        {"name": "scope.userLocation", "purpose": "附近门店", "essential": false}
+      ],
+      "collection_fields": [
+        {"name": "nickname", "purpose": "账号资料", "essential": true}
+      ],
+      "third_party_components": [],
+      "cancellation": {"entry": "我的-账号与安全-注销", "max_steps": 4, "sla_working_days": 15}
+    }
+  },
+  "deadline_extensions": [
+    {"occurred_at": "2026-08-06T14:00:00+08:00", "working_days": 5, "basis": "监管复核排期顺延"}
+  ]
+}

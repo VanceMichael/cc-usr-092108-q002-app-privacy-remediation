@@ -1,0 +1,7 @@
+{
+  "submissions": [
+    {"submission_id": "M1", "operator": "示例运营有限公司", "occurred_at": "2026-08-04T09:00:00+08:00", "content": {"versions": ["3.2.1"], "claims": ["R2-FORCED-PERMISSION", "R3-DISCLOSURE-COMPLETE", "R4-CANCELLATION-EFFECTIVE"]}},
+    {"submission_id": "M1-重发", "operator": "示例运营有限公司", "occurred_at": "2026-08-04T09:05:00+08:00", "content": {"versions": ["3.2.1"], "claims": ["R2-FORCED-PERMISSION", "R3-DISCLOSURE-COMPLETE", "R4-CANCELLATION-EFFECTIVE"]}},
+    {"submission_id": "M2", "operator": "示例运营有限公司", "occurred_at": "2026-08-11T15:00:00+08:00", "content": {"versions": ["1.4.2"], "claims": ["R4-CANCELLATION-EFFECTIVE"]}}
+  ]
+}
