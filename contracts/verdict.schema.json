@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "审查结论",
+  "type": "object",
+  "required": [
+    "verdict_id",
+    "subject",
+    "aspect",
+    "reviewer_id",
+    "role",
+    "value",
+    "occurred_at",
+    "recorded_at"
+  ],
+  "properties": {
+    "verdict_id": {"type": "string", "minLength": 1},
+    "subject": {"type": "string", "minLength": 1},
+    "aspect": {"type": "string", "minLength": 1},
+    "reviewer_id": {"type": "string", "minLength": 1},
+    "role": {"type": "string", "enum": ["reviewer", "lead"]},
+    "value": {"type": "string", "minLength": 1},
+    "occurred_at": {"type": "string"},
+    "recorded_at": {"type": "string"}
+  },
+  "additionalProperties": false
+}

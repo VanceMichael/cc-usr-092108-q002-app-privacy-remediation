@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "报送监管结论",
+  "type": "object",
+  "required": [
+    "report_id",
+    "app_id",
+    "channel",
+    "notice",
+    "deadline",
+    "categories",
+    "met_deadline",
+    "effective_release_at_deadline",
+    "data_minimization",
+    "ruleset_versions",
+    "inputs_digest"
+  ],
+  "properties": {
+    "report_id": {"type": "string", "minLength": 1},
+    "app_id": {"type": "string", "minLength": 1},
+    "channel": {"type": "string", "minLength": 1},
+    "notice": {
+      "type": "object",
+      "required": ["notice_date", "issues", "base_working_days"],
+      "properties": {
+        "notice_date": {"type": "string"},
+        "issues": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "base_working_days": {"type": "integer", "minimum": 1}
+      }
+    },
+    "deadline": {
+      "type": "object",
+      "required": ["timeline", "final_deadline"],
+      "properties": {
+        "timeline": {"type": "array", "minItems": 1},
+        "final_deadline": {"type": "string"}
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "status",
+          "within_deadline",
+          "closed_at",
+          "first_fail",
+          "current",
+          "verdict",
+          "history"
+        ],
+        "properties": {
+          "category": {"type": "string", "minLength": 1},
+          "status": {
+            "type": "string",
+            "enum": ["closed", "pending_review", "open", "not_tested"]
+          },
+          "history": {"type": "array"}
+        }
+      }
+    },
+    "met_deadline": {"type": "boolean"},
+    "effective_release_at_deadline": {},
+    "data_minimization": {
+      "type": "object",
+      "required": ["evidence_count", "retained_fields", "hashed_fields", "dropped_fields"],
+      "properties": {
+        "evidence_count": {"type": "integer", "minimum": 0},
+        "retained_fields": {"type": "array", "items": {"type": "string"}},
+        "hashed_fields": {"type": "array", "items": {"type": "string"}},
+        "dropped_fields": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "ruleset_versions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "inputs_digest": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

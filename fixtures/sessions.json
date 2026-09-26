@@ -1,0 +1,584 @@
+[
+  {
+    "session_id": "S-AND-001",
+    "app_id": "pome",
+    "channel": "starmarket",
+    "release_key": "pome:android:starmarket:4.3.0:4300",
+    "ruleset_version": "2026.06",
+    "environment": {
+      "device_model": "Pixel 8",
+      "os_version": "14",
+      "in_gray_cohort": false
+    },
+    "occurred_at": "2026-06-02T10:30:00+08:00",
+    "recorded_at": "2026-06-02T18:00:00+08:00",
+    "observations": [
+      {
+        "rule_id": "R-RULE-01",
+        "observation": {
+          "rules_accessible": false
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-AND-001D",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-02T10:12:00+08:00",
+            "minimized": {
+              "os_version": "14",
+              "app_version": "4.3.0",
+              "screen": "privacy_policy_entry",
+              "device_id_hash": "f4024c59cb7e3dc98d79f4be7b9de84e45bb319ab8c27901707bad1e7a7c1ced"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "device_id"
+              ],
+              "dropped": [
+                "note"
+              ],
+              "salt": "E-AND-001D",
+              "original_digest": "5cc06930842eed720a59eae6ab0d2bebcc7d7e48fea9e5d5ef4e30eb834285ff"
+            }
+          }
+        ]
+      },
+      {
+        "rule_id": "R-PERM-01",
+        "observation": {
+          "permission": "fine_location",
+          "permission_necessary": false,
+          "permission_denied": true,
+          "core_function_available": false
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-AND-001A",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-02T10:20:00+08:00",
+            "minimized": {
+              "os_version": "14",
+              "app_version": "4.3.0",
+              "screen": "permission_dialog",
+              "device_id_hash": "ef56afd79ec597717e830b70f1748b5c545be5281da93cfd9e86ca0f47105e3b",
+              "account_id_hash": "ffef286340e4ba5ff5ce880dfc1b914b7054906146c88d22d263b3ca091fabeb"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "account_id",
+                "device_id"
+              ],
+              "dropped": [
+                "note",
+                "precise_location"
+              ],
+              "salt": "E-AND-001A",
+              "original_digest": "f97df02f58358a60664acfd5257c1325bf88641f539ffdb7b13f746947e24f8a"
+            }
+          }
+        ]
+      },
+      {
+        "rule_id": "R-DISC-01",
+        "observation": {
+          "collected_field": "precise_location",
+          "field_disclosed": false,
+          "component_disclosed": false
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-AND-001B",
+            "kind": "network_log_meta",
+            "captured_at": "2026-06-02T10:25:00+08:00",
+            "minimized": {
+              "os_version": "14",
+              "app_version": "4.3.0",
+              "screen": "network_log",
+              "device_id_hash": "d51a30bcf512f8a3b9150d7724b58bbdadae9c9e75196cff41298f096c0b4b57"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "device_id"
+              ],
+              "dropped": [
+                "precise_location"
+              ],
+              "salt": "E-AND-001B",
+              "original_digest": "12793e779ccfedc86c59bb306ec1cc61ce2d61d976218614642cf705471fed8a"
+            }
+          }
+        ]
+      },
+      {
+        "rule_id": "R-CANCEL-01",
+        "observation": {
+          "entry_available": true,
+          "request_submitted": true,
+          "effective_within_promise": false
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-AND-001C",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-02T10:28:00+08:00",
+            "minimized": {
+              "os_version": "14",
+              "app_version": "4.3.0",
+              "screen": "account_cancel",
+              "device_id_hash": "48c93d360f7292bb77b788d00dde6e7bdacb94036e6936aca3c25f5d0ee860c6",
+              "account_id_hash": "7d9aa4a4a8c6125e74f9b96d5c0eaff0f100b4ce5dba908e40adb328615f2901"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "account_id",
+                "device_id"
+              ],
+              "dropped": [
+                "note"
+              ],
+              "salt": "E-AND-001C",
+              "original_digest": "1e0ed0b85dff17799e56ed12922dbf3477fd1460347e8dd0cc133477ea3a1e66"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "session_id": "S-AND-002",
+    "app_id": "pome",
+    "channel": "starmarket",
+    "release_key": "pome:android:starmarket:4.4.0:4400",
+    "ruleset_version": "2026.06",
+    "environment": {
+      "device_model": "Pixel 8",
+      "os_version": "14",
+      "in_gray_cohort": true
+    },
+    "occurred_at": "2026-06-15T14:00:00+08:00",
+    "recorded_at": "2026-06-15T20:00:00+08:00",
+    "observations": [
+      {
+        "rule_id": "R-RULE-01",
+        "observation": {
+          "rules_accessible": true
+        }
+      },
+      {
+        "rule_id": "R-PERM-01",
+        "observation": {
+          "permission": "fine_location",
+          "permission_necessary": false,
+          "permission_denied": true,
+          "core_function_available": true
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-AND-002A",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-15T14:10:00+08:00",
+            "minimized": {
+              "os_version": "14",
+              "app_version": "4.4.0",
+              "screen": "permission_dialog",
+              "device_id_hash": "194308b2e58103f5a3eedb46f2798b6cccf2514f894f738cda3006864b681fcf"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "device_id"
+              ],
+              "dropped": [],
+              "salt": "E-AND-002A",
+              "original_digest": "398baffebf027ba0883a013d90529019754fd05d3f56dc8cb1da0a9db4761f98"
+            }
+          }
+        ]
+      },
+      {
+        "rule_id": "R-DISC-01",
+        "observation": {
+          "collected_field": "precise_location",
+          "field_disclosed": true,
+          "component_disclosed": true
+        }
+      },
+      {
+        "rule_id": "R-CANCEL-01",
+        "observation": {
+          "entry_available": true,
+          "request_submitted": true,
+          "effective_within_promise": true
+        }
+      }
+    ]
+  },
+  {
+    "session_id": "S-AND-003",
+    "app_id": "pome",
+    "channel": "starmarket",
+    "release_key": "pome:android:starmarket:4.4.0:4400",
+    "ruleset_version": "2026.06",
+    "environment": {
+      "device_model": "Pixel 8",
+      "os_version": "14",
+      "in_gray_cohort": false
+    },
+    "occurred_at": "2026-06-19T10:00:00+08:00",
+    "recorded_at": "2026-06-19T17:00:00+08:00",
+    "observations": [
+      {
+        "rule_id": "R-RULE-01",
+        "observation": {
+          "rules_accessible": true
+        }
+      },
+      {
+        "rule_id": "R-PERM-01",
+        "observation": {
+          "permission": "fine_location",
+          "permission_necessary": false,
+          "permission_denied": true,
+          "core_function_available": true
+        }
+      },
+      {
+        "rule_id": "R-DISC-01",
+        "observation": {
+          "collected_field": "precise_location",
+          "field_disclosed": true,
+          "component_disclosed": true
+        }
+      },
+      {
+        "rule_id": "R-CANCEL-01",
+        "observation": {
+          "entry_available": true,
+          "request_submitted": true,
+          "effective_within_promise": true
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-AND-003A",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-19T10:20:00+08:00",
+            "minimized": {
+              "os_version": "14",
+              "app_version": "4.4.0",
+              "screen": "account_cancel",
+              "device_id_hash": "90333c26baaef240a51b17f69bdc98dd802d7dbc3e916ff06e272614efa17ebd",
+              "account_id_hash": "9e955354c7d0b68d7396fda809eedf863844950faf76d648becb477cc849c180"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "account_id",
+                "device_id"
+              ],
+              "dropped": [],
+              "salt": "E-AND-003A",
+              "original_digest": "92243cf4da95532db9bf6e6be0e685d4b0d6a34a951be4a1637e560dda26fdb1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "session_id": "S-IOS-001",
+    "app_id": "pome",
+    "channel": "appstore",
+    "release_key": "pome:ios:appstore:4.3.0:4300",
+    "ruleset_version": "2026.06",
+    "environment": {
+      "device_model": "iPhone 16",
+      "os_version": "18.4",
+      "in_gray_cohort": false
+    },
+    "occurred_at": "2026-06-03T11:00:00+08:00",
+    "recorded_at": "2026-06-03T19:00:00+08:00",
+    "observations": [
+      {
+        "rule_id": "R-RULE-01",
+        "observation": {
+          "rules_accessible": false
+        }
+      },
+      {
+        "rule_id": "R-DISC-01",
+        "observation": {
+          "collected_field": "precise_location",
+          "field_disclosed": false,
+          "component_disclosed": false
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-IOS-001A",
+            "kind": "network_log_meta",
+            "captured_at": "2026-06-03T11:15:00+08:00",
+            "minimized": {
+              "os_version": "18.4",
+              "app_version": "4.3.0",
+              "screen": "network_log",
+              "device_id_hash": "3e00d958620853a3f59a0ff1b8ed5c17e7bb75f09679791823c0ff70ed9263f0"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "device_id"
+              ],
+              "dropped": [
+                "precise_location"
+              ],
+              "salt": "E-IOS-001A",
+              "original_digest": "c3c41534f578f692698e26a19c9bdd4aecb1384b0ac05aa5c0ca1fd6e77fe04d"
+            }
+          }
+        ]
+      },
+      {
+        "rule_id": "R-CANCEL-01",
+        "observation": {
+          "entry_available": true,
+          "request_submitted": true,
+          "effective_within_promise": false
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-IOS-001B",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-03T11:25:00+08:00",
+            "minimized": {
+              "os_version": "18.4",
+              "app_version": "4.3.0",
+              "screen": "account_cancel",
+              "device_id_hash": "4c8569784a983e44888f0567ea21d6f13b35c221f5ae26a1db5b9cec7ae5ff4d",
+              "account_id_hash": "1feb3cacbd7928e6d1600c4e5b9309eab0bf1b364cd2547f9e58a531bec0d5ee"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "account_id",
+                "device_id"
+              ],
+              "dropped": [
+                "note"
+              ],
+              "salt": "E-IOS-001B",
+              "original_digest": "02f4218601ff2b60d0f746559447d26a54c401f16f1f1f30af629057159f360a"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "session_id": "S-IOS-002",
+    "app_id": "pome",
+    "channel": "appstore",
+    "release_key": "pome:ios:appstore:4.4.0:4400",
+    "ruleset_version": "2026.06",
+    "environment": {
+      "device_model": "iPhone 16",
+      "os_version": "18.4",
+      "in_gray_cohort": false
+    },
+    "occurred_at": "2026-06-25T10:00:00+08:00",
+    "recorded_at": "2026-06-25T18:00:00+08:00",
+    "observations": [
+      {
+        "rule_id": "R-RULE-01",
+        "observation": {
+          "rules_accessible": true
+        }
+      },
+      {
+        "rule_id": "R-DISC-01",
+        "observation": {
+          "collected_field": "precise_location",
+          "field_disclosed": true,
+          "component_disclosed": true
+        }
+      },
+      {
+        "rule_id": "R-CANCEL-01",
+        "observation": {
+          "entry_available": true,
+          "request_submitted": true,
+          "effective_within_promise": true
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-IOS-002A",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-25T10:20:00+08:00",
+            "minimized": {
+              "os_version": "18.4",
+              "app_version": "4.4.0",
+              "screen": "account_cancel",
+              "device_id_hash": "8f3dffc78ca8e152257ed9c4be12da1dfe6aebd5d450e16c9cd0b46b4ed90863",
+              "account_id_hash": "33c3a0905d579356a6fb41a22ed5819baea868ffd377c6a782b9eff51bd3ca30"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "account_id",
+                "device_id"
+              ],
+              "dropped": [],
+              "salt": "E-IOS-002A",
+              "original_digest": "3132e16f0cfe28b4a7ba97fb23c46db5df0f0b9bbc1479aa97d68cdb95df20f3"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "session_id": "S-WX-001",
+    "app_id": "pome",
+    "channel": "wxmini",
+    "release_key": "pome:mini_program:wxmini:4.4.0:4405",
+    "ruleset_version": "2026.06",
+    "environment": {
+      "device_model": "iPhone 16",
+      "os_version": "18.4",
+      "in_gray_cohort": false,
+      "client_version": "8.0.49"
+    },
+    "occurred_at": "2026-06-17T15:00:00+08:00",
+    "recorded_at": "2026-06-17T21:00:00+08:00",
+    "observations": [
+      {
+        "rule_id": "R-CANCEL-01",
+        "observation": {
+          "entry_available": true,
+          "request_submitted": true,
+          "effective_within_promise": false
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-WX-001A",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-17T15:10:00+08:00",
+            "minimized": {
+              "os_version": "18.4",
+              "app_version": "4.4.0",
+              "screen": "account_cancel",
+              "device_id_hash": "1eaedf6875a35b61b15a472117845c906086a975351fce33cfd61e3e6609a2dd",
+              "account_id_hash": "8a75d9a10d1c6e721e9c7abea2cd27a40806601ccf7592900488e9b1fe1fd717"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "account_id",
+                "device_id"
+              ],
+              "dropped": [
+                "note"
+              ],
+              "salt": "E-WX-001A",
+              "original_digest": "26ce28efee9df77cacb77d3a93e464dc0b979b096d0876ba73fd35e55ee0a1b6"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "session_id": "S-WX-002",
+    "app_id": "pome",
+    "channel": "wxmini",
+    "release_key": "pome:mini_program:wxmini:4.4.1:4410",
+    "ruleset_version": "2026.06",
+    "environment": {
+      "device_model": "iPhone 16",
+      "os_version": "18.4",
+      "in_gray_cohort": false,
+      "client_version": "8.0.49"
+    },
+    "occurred_at": "2026-06-23T10:00:00+08:00",
+    "recorded_at": "2026-06-23T16:00:00+08:00",
+    "observations": [
+      {
+        "rule_id": "R-CANCEL-01",
+        "observation": {
+          "entry_available": true,
+          "request_submitted": true,
+          "effective_within_promise": true
+        },
+        "evidence": [
+          {
+            "evidence_id": "E-WX-002A",
+            "kind": "screen_recording_meta",
+            "captured_at": "2026-06-23T10:10:00+08:00",
+            "minimized": {
+              "os_version": "18.4",
+              "app_version": "4.4.1",
+              "screen": "account_cancel",
+              "device_id_hash": "985d29b2d8bae505013e66c19e9b2180efc013411858c8d49a4a7f8cbeec806b",
+              "account_id_hash": "f92dd6b3cbb6ac9c763508b219d994b79b045c7d397c0f3ee2742d364b39c2c9"
+            },
+            "manifest": {
+              "kept": [
+                "app_version",
+                "os_version",
+                "screen"
+              ],
+              "hashed": [
+                "account_id",
+                "device_id"
+              ],
+              "dropped": [],
+              "salt": "E-WX-002A",
+              "original_digest": "0dd9ff30b9e7c73f71f6ea3e9748806710257c9046955dc540c09d983fd00daf"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

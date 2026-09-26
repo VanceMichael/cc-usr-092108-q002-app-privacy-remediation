@@ -1,0 +1,172 @@
+[
+  {
+    "verdict_id": "V-001",
+    "subject": "rectification:pome:starmarket:rules_unpublished",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-19T18:00:00+08:00",
+    "recorded_at": "2026-06-19T18:05:00+08:00"
+  },
+  {
+    "verdict_id": "V-002",
+    "subject": "rectification:pome:starmarket:rules_unpublished",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-19T18:30:00+08:00",
+    "recorded_at": "2026-06-19T18:35:00+08:00"
+  },
+  {
+    "verdict_id": "V-003",
+    "subject": "rectification:pome:starmarket:nonessential_permission",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-19T18:00:00+08:00",
+    "recorded_at": "2026-06-19T18:06:00+08:00"
+  },
+  {
+    "verdict_id": "V-004",
+    "subject": "rectification:pome:starmarket:nonessential_permission",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-19T18:30:00+08:00",
+    "recorded_at": "2026-06-19T18:36:00+08:00"
+  },
+  {
+    "verdict_id": "V-005",
+    "subject": "rectification:pome:starmarket:disclosure_incomplete",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-19T18:00:00+08:00",
+    "recorded_at": "2026-06-19T18:07:00+08:00"
+  },
+  {
+    "verdict_id": "V-006",
+    "subject": "rectification:pome:starmarket:disclosure_incomplete",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-19T18:30:00+08:00",
+    "recorded_at": "2026-06-19T18:37:00+08:00"
+  },
+  {
+    "verdict_id": "V-007",
+    "subject": "rectification:pome:starmarket:cancellation_ineffective",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "returned",
+    "occurred_at": "2026-06-19T18:00:00+08:00",
+    "recorded_at": "2026-06-19T18:08:00+08:00"
+  },
+  {
+    "verdict_id": "V-008",
+    "subject": "rectification:pome:starmarket:cancellation_ineffective",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-19T18:30:00+08:00",
+    "recorded_at": "2026-06-19T18:38:00+08:00"
+  },
+  {
+    "verdict_id": "V-009",
+    "subject": "rectification:pome:starmarket:cancellation_ineffective",
+    "aspect": "acceptance",
+    "reviewer_id": "lead-1",
+    "role": "lead",
+    "value": "accepted",
+    "occurred_at": "2026-06-22T09:30:00+08:00",
+    "recorded_at": "2026-06-22T09:35:00+08:00"
+  },
+  {
+    "verdict_id": "V-010",
+    "subject": "rectification:pome:appstore:rules_unpublished",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-26T10:00:00+08:00",
+    "recorded_at": "2026-06-26T10:05:00+08:00"
+  },
+  {
+    "verdict_id": "V-011",
+    "subject": "rectification:pome:appstore:rules_unpublished",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-26T10:30:00+08:00",
+    "recorded_at": "2026-06-26T10:35:00+08:00"
+  },
+  {
+    "verdict_id": "V-012",
+    "subject": "rectification:pome:appstore:disclosure_incomplete",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-26T10:00:00+08:00",
+    "recorded_at": "2026-06-26T10:06:00+08:00"
+  },
+  {
+    "verdict_id": "V-013",
+    "subject": "rectification:pome:appstore:disclosure_incomplete",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-26T10:30:00+08:00",
+    "recorded_at": "2026-06-26T10:36:00+08:00"
+  },
+  {
+    "verdict_id": "V-014",
+    "subject": "rectification:pome:appstore:cancellation_ineffective",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-26T10:00:00+08:00",
+    "recorded_at": "2026-06-26T10:07:00+08:00"
+  },
+  {
+    "verdict_id": "V-015",
+    "subject": "rectification:pome:appstore:cancellation_ineffective",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-26T10:30:00+08:00",
+    "recorded_at": "2026-06-26T10:37:00+08:00"
+  },
+  {
+    "verdict_id": "V-016",
+    "subject": "rectification:pome:wxmini:cancellation_ineffective",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-a",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-24T10:00:00+08:00",
+    "recorded_at": "2026-06-24T10:05:00+08:00"
+  },
+  {
+    "verdict_id": "V-017",
+    "subject": "rectification:pome:wxmini:cancellation_ineffective",
+    "aspect": "acceptance",
+    "reviewer_id": "rev-b",
+    "role": "reviewer",
+    "value": "accepted",
+    "occurred_at": "2026-06-24T10:30:00+08:00",
+    "recorded_at": "2026-06-24T10:35:00+08:00"
+  }
+]

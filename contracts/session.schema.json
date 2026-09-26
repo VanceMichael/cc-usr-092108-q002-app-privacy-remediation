@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "隐私检测会话",
+  "type": "object",
+  "required": [
+    "session_id",
+    "app_id",
+    "channel",
+    "release_key",
+    "ruleset_version",
+    "environment",
+    "occurred_at",
+    "recorded_at",
+    "observations"
+  ],
+  "properties": {
+    "session_id": {"type": "string", "minLength": 1},
+    "app_id": {"type": "string", "minLength": 1},
+    "channel": {"type": "string", "minLength": 1},
+    "release_key": {"type": "string", "minLength": 1},
+    "ruleset_version": {"type": "string", "minLength": 1},
+    "environment": {
+      "type": "object",
+      "required": ["device_model", "os_version", "in_gray_cohort"],
+      "properties": {
+        "device_model": {"type": "string", "minLength": 1},
+        "os_version": {"type": "string", "minLength": 1},
+        "in_gray_cohort": {"type": "boolean"},
+        "client_version": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "occurred_at": {"type": "string"},
+    "recorded_at": {"type": "string"},
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "observation"],
+        "properties": {
+          "rule_id": {"type": "string", "minLength": 1},
+          "observation": {"type": "object"},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["evidence_id", "kind", "captured_at", "minimized", "manifest"],
+              "properties": {
+                "evidence_id": {"type": "string", "minLength": 1},
+                "kind": {"type": "string", "minLength": 1},
+                "captured_at": {"type": "string"},
+                "minimized": {"type": "object"},
+                "manifest": {
+                  "type": "object",
+                  "required": ["kept", "hashed", "dropped", "salt", "original_digest"],
+                  "properties": {
+                    "kept": {"type": "array", "items": {"type": "string"}},
+                    "hashed": {"type": "array", "items": {"type": "string"}},
+                    "dropped": {"type": "array", "items": {"type": "string"}},
+                    "salt": {"type": "string"},
+                    "original_digest": {"type": "string", "minLength": 1}
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

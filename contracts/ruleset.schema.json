@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "检测规则来源",
+  "type": "object",
+  "required": ["version", "rules", "samples"],
+  "properties": {
+    "version": {"type": "string", "minLength": 1},
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "category", "description", "check"],
+        "properties": {
+          "rule_id": {"type": "string", "minLength": 1},
+          "category": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1},
+          "check": {"type": "object"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["sample_id", "rule_id", "observation", "expected"],
+        "properties": {
+          "sample_id": {"type": "string", "minLength": 1},
+          "rule_id": {"type": "string", "minLength": 1},
+          "observation": {"type": "object"},
+          "expected": {"type": "string", "enum": ["fail", "pass"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

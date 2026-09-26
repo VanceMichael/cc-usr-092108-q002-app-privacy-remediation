@@ -1,0 +1,43 @@
+{
+  "notices": [
+    {
+      "app_id": "pome",
+      "channel": "starmarket",
+      "notice_date": "2026-06-01",
+      "issues": [
+        "rules_unpublished",
+        "nonessential_permission",
+        "disclosure_incomplete",
+        "cancellation_ineffective"
+      ],
+      "base_working_days": 15
+    },
+    {
+      "app_id": "pome",
+      "channel": "appstore",
+      "notice_date": "2026-06-01",
+      "issues": [
+        "rules_unpublished",
+        "disclosure_incomplete",
+        "cancellation_ineffective"
+      ],
+      "base_working_days": 15
+    },
+    {
+      "app_id": "pome",
+      "channel": "wxmini",
+      "notice_date": "2026-06-01",
+      "issues": ["cancellation_ineffective"],
+      "base_working_days": 15
+    }
+  ],
+  "extensions": [
+    {
+      "occurred_at": "2026-06-22T17:00:00+08:00",
+      "extra_working_days": 5,
+      "reason": "应用商店审核延迟，监管同意法定期限顺延",
+      "recorded_at": "2026-06-23T09:00:00+08:00"
+    }
+  ],
+  "holidays": ["2026-06-19"]
+}

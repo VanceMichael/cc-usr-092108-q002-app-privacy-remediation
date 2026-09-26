@@ -1,0 +1,143 @@
+{
+  "version": "2026.06",
+  "rules": [
+    {
+      "rule_id": "R-RULE-01",
+      "category": "rules_unpublished",
+      "description": "个人信息规则未公开或无法正常访问",
+      "check": {"field": "rules_accessible", "eq": false}
+    },
+    {
+      "rule_id": "R-PERM-01",
+      "category": "nonessential_permission",
+      "description": "拒绝非必要权限后核心功能不可用，属于强制索取",
+      "check": {
+        "all": [
+          {"field": "permission_necessary", "eq": false},
+          {"field": "permission_denied", "eq": true},
+          {"field": "core_function_available", "eq": false}
+        ]
+      }
+    },
+    {
+      "rule_id": "R-DISC-01",
+      "category": "disclosure_incomplete",
+      "description": "实际采集字段或第三方组件未在个人信息规则中披露",
+      "check": {
+        "any": [
+          {
+            "all": [
+              {"field": "collected_field", "ne": ""},
+              {"field": "field_disclosed", "eq": false}
+            ]
+          },
+          {"field": "component_disclosed", "eq": false}
+        ]
+      }
+    },
+    {
+      "rule_id": "R-CANCEL-01",
+      "category": "cancellation_ineffective",
+      "description": "注销入口不可用，或注销未在承诺时限内生效",
+      "check": {
+        "any": [
+          {"field": "entry_available", "eq": false},
+          {
+            "all": [
+              {"field": "request_submitted", "eq": true},
+              {"field": "effective_within_promise", "eq": false}
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "S-RULE-01A",
+      "rule_id": "R-RULE-01",
+      "observation": {"rules_accessible": false},
+      "expected": "fail"
+    },
+    {
+      "sample_id": "S-RULE-01B",
+      "rule_id": "R-RULE-01",
+      "observation": {"rules_accessible": true},
+      "expected": "pass"
+    },
+    {
+      "sample_id": "S-PERM-01A",
+      "rule_id": "R-PERM-01",
+      "observation": {
+        "permission_necessary": false,
+        "permission_denied": true,
+        "core_function_available": false
+      },
+      "expected": "fail"
+    },
+    {
+      "sample_id": "S-PERM-01B",
+      "rule_id": "R-PERM-01",
+      "observation": {
+        "permission_necessary": false,
+        "permission_denied": true,
+        "core_function_available": true
+      },
+      "expected": "pass"
+    },
+    {
+      "sample_id": "S-PERM-01C",
+      "rule_id": "R-PERM-01",
+      "observation": {
+        "permission_necessary": true,
+        "permission_denied": true,
+        "core_function_available": false
+      },
+      "expected": "pass"
+    },
+    {
+      "sample_id": "S-DISC-01A",
+      "rule_id": "R-DISC-01",
+      "observation": {"collected_field": "precise_location", "field_disclosed": false},
+      "expected": "fail"
+    },
+    {
+      "sample_id": "S-DISC-01B",
+      "rule_id": "R-DISC-01",
+      "observation": {"collected_field": "precise_location", "field_disclosed": true},
+      "expected": "pass"
+    },
+    {
+      "sample_id": "S-DISC-01C",
+      "rule_id": "R-DISC-01",
+      "observation": {"component_disclosed": false},
+      "expected": "fail"
+    },
+    {
+      "sample_id": "S-CANCEL-01A",
+      "rule_id": "R-CANCEL-01",
+      "observation": {"entry_available": false},
+      "expected": "fail"
+    },
+    {
+      "sample_id": "S-CANCEL-01B",
+      "rule_id": "R-CANCEL-01",
+      "observation": {
+        "entry_available": true,
+        "request_submitted": true,
+        "effective_within_promise": false
+      },
+      "expected": "fail"
+    },
+    {
+      "sample_id": "S-CANCEL-01C",
+      "rule_id": "R-CANCEL-01",
+      "observation": {
+        "entry_available": true,
+        "request_submitted": true,
+        "effective_within_promise": true
+      },
+      "expected": "pass"
+    }
+  ]
+}

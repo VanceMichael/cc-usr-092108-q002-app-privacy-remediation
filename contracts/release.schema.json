@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "客户端版本登记",
+  "type": "object",
+  "required": [
+    "app_id",
+    "platform",
+    "channel",
+    "version",
+    "build",
+    "release_kind",
+    "effective_from",
+    "privacy_rules",
+    "permissions",
+    "collection_fields",
+    "components",
+    "cancellation",
+    "registered_at"
+  ],
+  "properties": {
+    "app_id": {"type": "string", "minLength": 1},
+    "platform": {"type": "string", "enum": ["android", "ios", "mini_program"]},
+    "channel": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "build": {"type": "string", "minLength": 1},
+    "release_kind": {"type": "string", "enum": ["full", "gray", "hot_update"]},
+    "gray_percent": {"type": "integer", "minimum": 1},
+    "submitted_at": {"type": "string"},
+    "approved_at": {"type": "string"},
+    "effective_from": {"type": "string"},
+    "full_rollout_at": {"type": "string"},
+    "privacy_rules": {
+      "type": "object",
+      "required": ["version", "disclosed_fields", "disclosed_permissions"],
+      "properties": {
+        "version": {"type": "string", "minLength": 1},
+        "disclosed_fields": {"type": "array", "items": {"type": "string"}},
+        "disclosed_permissions": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["permission", "purpose", "necessary"],
+        "properties": {
+          "permission": {"type": "string", "minLength": 1},
+          "purpose": {"type": "string", "minLength": 1},
+          "necessary": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "collection_fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "purpose", "necessary"],
+        "properties": {
+          "field": {"type": "string", "minLength": 1},
+          "purpose": {"type": "string", "minLength": 1},
+          "necessary": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "version", "collects"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "version": {"type": "string", "minLength": 1},
+          "collects": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "cancellation": {
+      "type": "object",
+      "required": ["entry", "steps", "manual_review", "promise_days"],
+      "properties": {
+        "entry": {"type": "string", "minLength": 1},
+        "steps": {"type": "integer", "minimum": 1},
+        "manual_review": {"type": "boolean"},
+        "promise_days": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "registered_at": {"type": "string"}
+  },
+  "additionalProperties": false
+}

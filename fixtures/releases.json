@@ -1,0 +1,208 @@
+[
+  {
+    "app_id": "pome",
+    "platform": "android",
+    "channel": "starmarket",
+    "version": "4.3.0",
+    "build": "4300",
+    "release_kind": "full",
+    "submitted_at": "2026-02-25T10:00:00+08:00",
+    "approved_at": "2026-03-01T15:00:00+08:00",
+    "effective_from": "2026-03-02T10:00:00+08:00",
+    "privacy_rules": {
+      "version": "4.3.0-2026.03",
+      "disclosed_fields": ["device_id", "crash_log"],
+      "disclosed_permissions": ["camera"]
+    },
+    "permissions": [
+      {"permission": "camera", "purpose": "扫码登录", "necessary": true},
+      {"permission": "fine_location", "purpose": "内容推荐", "necessary": false}
+    ],
+    "collection_fields": [
+      {"field": "device_id", "purpose": "安全风控", "necessary": true},
+      {"field": "crash_log", "purpose": "稳定性分析", "necessary": true},
+      {"field": "precise_location", "purpose": "内容推荐", "necessary": false}
+    ],
+    "components": [
+      {"name": "umeng-sdk", "version": "9.6.0", "collects": ["device_id"]},
+      {"name": "ad-sdk", "version": "3.2.1", "collects": ["device_id", "precise_location"]}
+    ],
+    "cancellation": {
+      "entry": "我的-设置-账号与安全-注销账号",
+      "steps": 5,
+      "manual_review": true,
+      "promise_days": 15
+    },
+    "registered_at": "2026-03-02T12:00:00+08:00"
+  },
+  {
+    "app_id": "pome",
+    "platform": "android",
+    "channel": "starmarket",
+    "version": "4.4.0",
+    "build": "4400",
+    "release_kind": "gray",
+    "gray_percent": 20,
+    "submitted_at": "2026-06-08T10:00:00+08:00",
+    "approved_at": "2026-06-09T18:00:00+08:00",
+    "effective_from": "2026-06-10T10:00:00+08:00",
+    "full_rollout_at": "2026-06-18T10:00:00+08:00",
+    "privacy_rules": {
+      "version": "4.4.0-2026.06",
+      "disclosed_fields": ["device_id", "crash_log", "precise_location"],
+      "disclosed_permissions": ["camera", "fine_location"]
+    },
+    "permissions": [
+      {"permission": "camera", "purpose": "扫码登录", "necessary": true},
+      {"permission": "fine_location", "purpose": "内容推荐", "necessary": false}
+    ],
+    "collection_fields": [
+      {"field": "device_id", "purpose": "安全风控", "necessary": true},
+      {"field": "crash_log", "purpose": "稳定性分析", "necessary": true},
+      {"field": "precise_location", "purpose": "内容推荐", "necessary": false}
+    ],
+    "components": [
+      {"name": "umeng-sdk", "version": "9.6.2", "collects": ["device_id"]}
+    ],
+    "cancellation": {
+      "entry": "我的-设置-账号与安全-注销账号",
+      "steps": 4,
+      "manual_review": false,
+      "promise_days": 5
+    },
+    "registered_at": "2026-06-10T09:00:00+08:00"
+  },
+  {
+    "app_id": "pome",
+    "platform": "ios",
+    "channel": "appstore",
+    "version": "4.3.0",
+    "build": "4300",
+    "release_kind": "full",
+    "submitted_at": "2026-02-26T10:00:00+08:00",
+    "approved_at": "2026-03-04T11:00:00+08:00",
+    "effective_from": "2026-03-05T10:00:00+08:00",
+    "privacy_rules": {
+      "version": "4.3.0-2026.03",
+      "disclosed_fields": ["device_id", "crash_log"],
+      "disclosed_permissions": ["camera"]
+    },
+    "permissions": [
+      {"permission": "camera", "purpose": "扫码登录", "necessary": true},
+      {"permission": "photo_library", "purpose": "头像上传", "necessary": false}
+    ],
+    "collection_fields": [
+      {"field": "device_id", "purpose": "安全风控", "necessary": true},
+      {"field": "crash_log", "purpose": "稳定性分析", "necessary": true},
+      {"field": "precise_location", "purpose": "内容推荐", "necessary": false}
+    ],
+    "components": [
+      {"name": "umeng-sdk", "version": "9.6.0", "collects": ["device_id"]},
+      {"name": "ad-sdk", "version": "3.2.1", "collects": ["device_id", "precise_location"]}
+    ],
+    "cancellation": {
+      "entry": "我的-设置-账号与安全-注销账号",
+      "steps": 5,
+      "manual_review": true,
+      "promise_days": 15
+    },
+    "registered_at": "2026-03-05T12:00:00+08:00"
+  },
+  {
+    "app_id": "pome",
+    "platform": "ios",
+    "channel": "appstore",
+    "version": "4.4.0",
+    "build": "4400",
+    "release_kind": "full",
+    "submitted_at": "2026-06-12T10:00:00+08:00",
+    "approved_at": "2026-06-24T09:00:00+08:00",
+    "effective_from": "2026-06-24T10:00:00+08:00",
+    "privacy_rules": {
+      "version": "4.4.0-2026.06",
+      "disclosed_fields": ["device_id", "crash_log", "precise_location"],
+      "disclosed_permissions": ["camera", "photo_library"]
+    },
+    "permissions": [
+      {"permission": "camera", "purpose": "扫码登录", "necessary": true},
+      {"permission": "photo_library", "purpose": "头像上传", "necessary": false}
+    ],
+    "collection_fields": [
+      {"field": "device_id", "purpose": "安全风控", "necessary": true},
+      {"field": "crash_log", "purpose": "稳定性分析", "necessary": true},
+      {"field": "precise_location", "purpose": "内容推荐", "necessary": false}
+    ],
+    "components": [
+      {"name": "umeng-sdk", "version": "9.6.2", "collects": ["device_id"]}
+    ],
+    "cancellation": {
+      "entry": "我的-设置-账号与安全-注销账号",
+      "steps": 4,
+      "manual_review": false,
+      "promise_days": 5
+    },
+    "registered_at": "2026-06-24T11:00:00+08:00"
+  },
+  {
+    "app_id": "pome",
+    "platform": "mini_program",
+    "channel": "wxmini",
+    "version": "4.4.0",
+    "build": "4405",
+    "release_kind": "hot_update",
+    "effective_from": "2026-06-16T10:00:00+08:00",
+    "privacy_rules": {
+      "version": "4.4.0-2026.06",
+      "disclosed_fields": ["device_id", "crash_log", "precise_location"],
+      "disclosed_permissions": ["camera"]
+    },
+    "permissions": [
+      {"permission": "camera", "purpose": "扫码登录", "necessary": true}
+    ],
+    "collection_fields": [
+      {"field": "device_id", "purpose": "安全风控", "necessary": true},
+      {"field": "crash_log", "purpose": "稳定性分析", "necessary": true}
+    ],
+    "components": [
+      {"name": "umeng-mini", "version": "2.3.0", "collects": ["device_id"]}
+    ],
+    "cancellation": {
+      "entry": "我的-设置-注销账号",
+      "steps": 4,
+      "manual_review": true,
+      "promise_days": 15
+    },
+    "registered_at": "2026-06-16T10:30:00+08:00"
+  },
+  {
+    "app_id": "pome",
+    "platform": "mini_program",
+    "channel": "wxmini",
+    "version": "4.4.1",
+    "build": "4410",
+    "release_kind": "hot_update",
+    "effective_from": "2026-06-22T14:00:00+08:00",
+    "privacy_rules": {
+      "version": "4.4.1-2026.06",
+      "disclosed_fields": ["device_id", "crash_log", "precise_location"],
+      "disclosed_permissions": ["camera"]
+    },
+    "permissions": [
+      {"permission": "camera", "purpose": "扫码登录", "necessary": true}
+    ],
+    "collection_fields": [
+      {"field": "device_id", "purpose": "安全风控", "necessary": true},
+      {"field": "crash_log", "purpose": "稳定性分析", "necessary": true}
+    ],
+    "components": [
+      {"name": "umeng-mini", "version": "2.3.1", "collects": ["device_id"]}
+    ],
+    "cancellation": {
+      "entry": "我的-设置-注销账号",
+      "steps": 3,
+      "manual_review": false,
+      "promise_days": 5
+    },
+    "registered_at": "2026-06-22T14:30:00+08:00"
+  }
+]
